@@ -1,0 +1,12 @@
+
+const printAllLeafNodes = (root) => {
+	if(root == null) return
+
+	if(root.left == null && root.right == null){
+		print(root.val + ", ")
+		return
+	}
+
+	if(root.left !== null) printAllLeafNodes(root.left)
+	if(root.right !== null) printAllLeafNodes(root.right)
+}

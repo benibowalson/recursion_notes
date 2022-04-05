@@ -1,0 +1,45 @@
+
+
+public static void mergeSort(int[] arr, int start, int end){
+	if(start < end){
+		int mid = (start + end) / 2;
+		mergeSort(arr, start, mid);
+		mergeSort(arr, mid + 1, end);
+		merge(arr, start, mid, end);
+	}
+}
+
+public static void merge(int[] data, int start, int mid, int end){
+	// temp array
+	int[] temp = new int[end - start + 1]
+
+	int leftIndex = start, rightIndex = mid + 1, bufferIndex = 0;
+	while(i <= mid && j <= end){		// both sub-arrays have values
+		if(data[leftIndex] <= data[rightIndex]){
+			temp[bufferIndex] = data[leftIndex]
+			leftIndex++;
+			bufferIndex++;
+		} else {
+			temp[bufferIndex] = data[rightIndex]
+			rightIndex++;
+			bufferIndex++;
+		}
+	}
+
+	// if only left sub array has values remaining
+	while(leftIndex <= mid){
+		temp[bufferIndex] = data[leftIndex]
+		leftIndex++; bufferIndex++;
+	}
+
+	// if only right sub array has values remaining
+	while(rightIndex <= end){
+		temp[bufferIndex] = data[rightIndex]
+		rightIndex++; bufferIndex++;
+	}
+
+	// now mutilate original array with temp array
+	for(leftIndex = start; leftIndex <= end; leftIndex++){
+		data[leftIndex] = temp[leftIndex - start]
+	}
+}

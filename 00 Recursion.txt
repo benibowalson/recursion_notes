@@ -1,0 +1,14 @@
+
+RECURSION
+
+1. What is least amount of work I can do?
+2. What would be my job complete signal?
+
+const doRecursion = (someVar) => {
+	if(someConditionFulfilledOn(someVar)) return
+
+	return doRecursion(someNextVar)
+}
+
+1. Handle base case (work complete)
+2. Recurse with the smallest amount of work that can be done

@@ -1,0 +1,6 @@
+
+CALL STACK
+
+Stack Overflow Error: amount of required/used memory exceeds pre-allocated amount of memory
+
+memory usage exceeding the amount of memory pre-allocated to our program

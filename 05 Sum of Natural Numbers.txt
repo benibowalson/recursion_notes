@@ -1,0 +1,7 @@
+
+const sumNaturalNumbersUpTo = (N) => {
+	// Stop
+	if(decimalNum <= 1) return N
+
+	return N + sumNaturalNumbersUpTo(N - 1)
+}

@@ -1,0 +1,9 @@
+
+const findBinary(decimalNum, strResult){
+	// Stop
+	if(decimalNum === 0) return result
+
+	result = decimalNum % 2 + strResult
+
+	return findBinary(decimalNum / 2, strResult)
+}

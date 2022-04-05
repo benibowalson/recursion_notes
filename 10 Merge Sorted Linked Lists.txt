@@ -1,0 +1,13 @@
+
+const MergeSortedLinkedLists = (Node headA, Node headB) => {
+	if(headA == null) return headB
+	if(headB == null) return headA
+
+	if(headA.data < headB.data){
+		headA.next = MergeSortedLinkedLists(headA.next, headB)
+		return headA
+	} else {
+		headB.next = MergeSortedLinkedLists(headA, headB.next)
+		return headB
+	}
+}

@@ -1,0 +1,21 @@
+Binary Tree Key Property:
+
+Top node is of highest value
+All smaller values are inserted left side
+All greater values are inserted right side
+
+const insertNode = (head, newData) => {
+	if(head == null){
+		head = new Node()
+		head.data = newData
+		return head
+	}
+
+	if(newData > head.data){
+		head.right = insertNode(head.right, newData)
+	} else {
+		head.left = insertNode(head.left, newData)
+	}
+
+	return head
+}

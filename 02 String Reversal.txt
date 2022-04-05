@@ -1,0 +1,9 @@
+
+const reverseMyString(someString)
+
+Stop Condition: Empty String
+	// if(input.equals("")) return
+
+Least work: reverse a string with just ONE LETTER	// result is that letter itself
+	// take the first letter to the end
+	// return reverseMyString(input.substring(1)) + input.charAt(0)

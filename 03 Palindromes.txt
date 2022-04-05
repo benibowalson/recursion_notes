@@ -1,0 +1,15 @@
+
+Example Palindromes:
+	// kayak, hannah, mallam, racecar
+
+const blnIsPalindrome(someString)
+
+//Stop Condtion
+if(someString.length == 0 || someString.length == 1) return true
+
+// Least work
+if(someString.charAt(0) == someString.charAt(someString.length - 1){
+	return blnIsPalindrome(someString.substring(1, someString.length - 1))
+}
+
+return false

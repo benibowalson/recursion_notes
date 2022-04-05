@@ -1,0 +1,15 @@
+
+const depthFirstSearch = (node, visitedSet, target) => {
+	if(node === null) return false
+
+	if(node.val == target) return true
+
+	for(let neighbor of node.neighbors){
+		if(visitedSet.has(neighbor) continue
+		visited.add(neighbor)
+		isFound = depthFirstSearch(neighbor, visitedSet, target)
+		if(isFound) return true
+	}
+
+	return false
+}

@@ -1,0 +1,15 @@
+
+const binarySearch = (sortedArray, leftIndex, rightIndex, valOfInterest) => {
+	// Stop
+	if(leftIndex > rightIndex) return -1		// not found
+
+	midIndex = (leftIndex + rightIndex) / 2
+
+	if(sortedArray[midIndex] === valOfInterest) return midIndex
+
+	if(sortedArray[midIndex] > valOfInterest){
+		return binarySearch(sortedArray, leftIndex, midIndex - 1, valOfInterest)
+	}
+
+	return binarySearch(sortedArray, midIndex + 1, rightIndex, valOfInterest)
+}
